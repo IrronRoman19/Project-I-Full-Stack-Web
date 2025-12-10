@@ -6,6 +6,6 @@ In task board you can create, save and delete tasks!
 
 In every task contain: task that written, per date and hour.
 
-Link: https://irronroman19.github.io/Project-I/
+Link: https://irronroman19.github.io/Project-I-Full-Stack-Web/
 
 Created by Roman Fesunenko
