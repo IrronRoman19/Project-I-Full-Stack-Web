@@ -1,13 +1,25 @@
 body {
-    background-image: url(./assets/images/tile.jpg)
+    background-image: url(./assets/images/tile.jpg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#pageDesign {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 #copyright {
     text-align: center;
-    color: darkblue;
-    text-shadow: 2px 2px 1px lime;
+    color: mintcream;
+    text-shadow: 2px 2px 1px navy;
     font-weight: bold;
     font-style: italic;
+    margin-top: auto;
+    padding: 20px;
 }
 
 #headDiv {
@@ -19,13 +31,11 @@ body {
 }
 
 #totalTasksDiv {
-    
     padding: 10px;
     margin: 10px;
 }
 
 .tasks {
-    justify-content: flex-start;
     display: flex;
     flex-wrap: wrap;
 }
@@ -40,38 +50,28 @@ body {
     background-image: url(./assets/images/notebg.png);
     width: 175px;
     height: 250px;
-
+    position: relative;
 }
 
-.hideDelButton {
-    visibility: hidden;
-}
-
-.hideDelButton:hover {
-    transition: all 3s;
+.deleteBtn {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
     cursor: pointer;
 }
 
-.deleteTask .hiddenDelete {
-    visibility: hidden;
-}
- 
-.deleteTask:hover .hiddenDelete {
-    animation-name: FadeInTask;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-
-    visibility: visible;
+.note:hover .deleteBtn {
+    opacity: 1;
 }
 
-.taskContain {
+#taskContain {
     text-align: center;
     position: relative;
 }
 
-.taskTextarea {
+#taskTextarea {
     resize: none;
 }
 
@@ -81,7 +81,7 @@ body {
     height: 20%;
     border: 1px solid black;
     color: darkblue;
-    text-shadow: 2px 2px 1px lime;
+    text-shadow: 2px 2px 1px cyan;
     font-weight: bold;
     font-style: italic;
     margin: auto;
@@ -100,11 +100,10 @@ input {
 }
 
 h1 {
-    color: blue;
-    text-shadow: 2px 2px 1px yellow;
+    color: mintcream;
+    text-shadow: 2px 2px 1px navy;
     text-align: center;
     font-family: wolf;
-    font-style: italic;
 }
 
 @font-face {
